@@ -16,3 +16,7 @@ spring:
           uri: lb://authentication-service
           predicates:
           - Path=/authservice/**
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    reactor.netty.http.client: DEBUG
