@@ -24,7 +24,7 @@ class AuthPreFilter : GlobalFilter {
             "/authservice/login",
             "/authservice/resumeSession",
             "/config.js",
-            "/authservice/createNewAccount",
+            "/authservice/account/createNewAccount",
             "/api/dbcontroller",
             "/favicon.ico"
     )

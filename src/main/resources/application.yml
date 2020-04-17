@@ -13,10 +13,18 @@ spring:
     gateway:
       routes:
         - id: path_route
-          uri: lb://authentication-service
-          predicates:
-          - Path=/authservice/**
-logging:
-  level:
-    org.springframework.cloud.gateway: DEBUG
-    reactor.netty.http.client: DEBUG
+            uri: lb://authentication-service
+            predicates:
+              - Path=/authenticationService/**
+        - id: path_route
+            uri: lb://matchmaking-service
+            predicates:
+              - Path=/matchmakingService/**
+        - id: path_route
+            uri: lb://scoreboard-service
+            predicates:
+              - Path=/scoreboardService/**
+        - id: path_route
+            uri: lb://gameinstance-service
+            predicates:
+              - Path=/gameinstanceService/**
