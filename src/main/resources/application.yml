@@ -13,18 +13,18 @@ spring:
     gateway:
       routes:
         - id: path_route
-            uri: lb://authentication-service
-            predicates:
-              - Path=/authenticationService/**
+          uri: lb://authentication-service
+          predicates:
+            - Path=/authenticationService/**
         - id: path_route
-            uri: lb://matchmaking-service
-            predicates:
-              - Path=/matchmakingService/**
+          uri: lb://matchmaking-service
+          predicates:
+            - Path=/matchmakingService/**
         - id: path_route
-            uri: lb://scoreboard-service
-            predicates:
-              - Path=/scoreboardService/**
+          uri: lb://scoreboard-service
+          predicates:
+            - Path=/scoreboardService/**
         - id: path_route
-            uri: lb://gameinstance-service
-            predicates:
-              - Path=/gameinstanceService/**
+          uri: lb://gameinstance-service
+          predicates:
+            - Path=/gameinstanceService/**

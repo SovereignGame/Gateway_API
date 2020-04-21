@@ -21,10 +21,10 @@ class AuthPreFilter : GlobalFilter {
     lateinit var proxy: AuthFilterServiceProxy
 
     private val skipPaths = listOf(
-            "/authservice/login",
-            "/authservice/resumeSession",
+            "/authenticationService/session/login",
+            "/authenticationService/session/resumeSession",
             "/config.js",
-            "/authservice/account/createNewAccount",
+            "/authenticationService/account/createNewAccount",
             "/api/dbcontroller",
             "/favicon.ico"
     )
